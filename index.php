@@ -1,17 +1,14 @@
 <?php
-    //modifica estos valores para personalizar la plantilla
-    //Modificalos segun esté en el formulario o info que te proporcionen
     $nombre_contacto = "Cliente 1";
     $dominio = "yamblet.com";
     $titulo = "Vanity Air";
     $propuesta_valor_corta = "Empresarial";
 
-    //puedes añadir los colores por nombre o por hexadecimal
     $tema_color_1 = "black";
     $tema_color_2 = "white";
     $tema_color_3 = "#F0FEFF";
-    $tema_color_4 = "#00BFD3"; //este color es el que aparecerá en la barra de navegacion de chrome para a movil
-    //si necesitas mas colores añadelo aqui y hazle echo en el documento 
+    $tema_color_4 = "#00BFD3"; 
+
     $descripcion_negocio = "Academia de Danza Aérea";
     $decripcion_negocio_slogan = "Nuestras clases de Danza Aérea combinan elementos como: telas, aro y  trapecio.
     Vanity Air además de ser el espacio ideal para aprender, te da la oportunidad de vivir la experiencia de presentarte en un teatro. 
@@ -19,30 +16,25 @@
     Trabajamos en armonía y constante comunicación para hacerte sentir como en casa. Contamos con especialistas y profesionales en Danza Aérea.
     Cada uno ha participado en diferentes compañías artísticas en México y diferentes partes del Mundo.";
 
-    //púedes añadir texto adicional con una variable o directamente al documento, como prefieras (siempre con buena ortografia, no como el desarrollador que hizo esta plantilla) 
     $texto= "Acrobacias, ritmo, elegancia, imaginación y condición física, son los elementos que forman parte de la danza aérea. ¿Te apuntas? Te ayudamos a adentrarte en el mundo de la danza aérea con técnicas corporales que te permitirán desarrollarte en las alturas empleando diversos elementos en diferentes aparatos como el aro o el trapecio.";
-    $telefono = 5519793131; //telefono local<---- no se proporciono
-    $telefono_wa = 5519793131; //numero que lanza el icono de whatsapp
+    $telefono = 5519793131;
+    $telefono_wa = 5519793131;
     $ubicacion = "Av. Paseo de la Reforma 26 Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX";
-    $link_contacto = "google.com";//link a otra web si lo requiere
-    $correo_contacto = "prueba@vanityair.com"; //como aparezca en el formulario, se creará despues de que se compre el dominio
-    $mensaje_default_WA="Gracias por contactar a $titulo, ¿En qué puedo ayudarte?"; //el mensaje con el que se va alanzar el boton de whatsapp
+    $correo_contacto = "prueba@vanityair.com";
+    $mensaje_default_WA="Gracias por contactar a $titulo, ¿En qué puedo ayudarte?";
 
-    //si no tiene alguna de las redes borra el icono en la parte del footer que dice "redes sociales"
+    
     $instagram="https://www.instagram.com/yamblet_/";
     $facebook="https://www.facebook.com/Yamblet";
     $twitter="https://twitter.com/Yamblet";
     $linkedin = "https://www.linkedin.com/company/yamblet";
-    //en caso de faltar alguna (linkedin o youtube) añadela en el footer con su icono de font awesome correspondiente
     
-    //remplaza las imagenes que necesites (o como se vea mejor)
-    $icono = "images/Logoprueba_icono.png"; //imagen que aparece en la pestaña del navegador
-    $header = "images/Galería/prueba_img_danza_01.jpg"; //imagen de fondo en la seccion header
-    $imagen_perfil = "images/Logo/prueba_logo_completo.png"; //imagen central en la seccion header
-    $footer = "images/Logo/prueba_logo_azul.png"; //imagen que aparece en el footer
-    $navbar = "images/Logo/prueba_logo_blanco.png"; //imagen que aparece en el brand del navbar
+    $icono = "images/Logoprueba_icono.png";
+    $header = "images/Galería/prueba_img_danza_01.jpg";
+    $imagen_perfil = "images/Logo/prueba_logo_completo.png";
+    $footer = "images/Logo/prueba_logo_azul.png";
+    $navbar = "images/Logo/prueba_logo_blanco.png";
 
-    //cuando entregues, borra todos los comentarios de ayuda del documento :u
 ?>
 <!DOCTYPE html>
 <html lang="es">
@@ -90,11 +82,11 @@
     <meta name="msapplication-TileColor" content="<?php echo $tema_color_1 ?>">
     <meta name="msapplication-TileImage" content="<?php echo $icono ?>">
     <meta name="theme-color" content="<?php echo $tema_color_4?>">
-    <link rel="stylesheet" href="floating-wpp.min.css">
-    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
-    <script type="text/javascript" src="floating-wpp.min.js"></script>
-    <!--si necesitas añadir mas estilo hazlo aquí-->
-    <!--elimina los estilos que no necesitas-->
+    <!--Componentes para el boton flotante de whatsapp https://github.com/rafaelbotazini/floating-whatsapp-->
+    <link rel="stylesheet" href="whatsButton/floating-wpp.min.css">
+    <script type="text/javascript" src="whatsButton/jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="whatsButton/floating-wpp.min.js"></script>
+    
     <style>
     body {
         font-family: 'Raleway', sans-serif;
@@ -110,10 +102,6 @@
         background-color: <?php echo $tema_color_4 ?> !important;
     }
 
-    h4 {
-        font-weight: 300;
-    }
-
     .jumbotron {
         padding: 6rem 2rem;
         border-radius: 0rem;
@@ -123,6 +111,8 @@
         box-shadow: 1px 1px 10px 3px #00000042;
     }
 
+    /*h1 usa los mismos estilos que h2, h3, h4 y li, asi que se conjunta*/ 
+    h1,
     h2,
     h3,
     h4,
@@ -132,17 +122,12 @@
         font-weight: 700;
     }
 
-    h1 {
-        color: <?php echo $tema_color_4 ?>;
-        font-family: 'Raleway', sans-serif;
-        font-weight: 700;
-    }
-
-    label,
+    /*Los textos mostrados por p y a faltaban justificarse */
     p,
     a {
         color: <?php echo $tema_color_1 ?>;
         font-family: 'Raleway', sans-serif;
+        text-align: justify;
     }
 
     .btn {
@@ -157,10 +142,6 @@
     footer {
         color: <?php echo $tema_color_1?>;
         background-color: <?php echo $tema_color_2?>;
-    }
-
-    .col {
-        text-align: justify;
     }
 
     i {
@@ -179,7 +160,6 @@
         nonce="FOEVmYye"></script>
     <!--NAVBAR-->
     <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
-        <!--si el color de la navbar es claro, cambia a navbar-light-->
         <a class="navbar-brand" href="#page-top"><img class="img-responsive" src="<?php echo $navbar?>"
                 style="box-shadow:none; height: 3rem;"></a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
@@ -188,8 +168,6 @@
         </button>
         <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
-                <!--añade los items que necesites-->
-
                 <li class="nav-item">
                     <a class="nav-link " href="#seccion1">Nosotros</a>
                 </li>
@@ -202,8 +180,6 @@
             </ul>
         </div>
     </nav>
-    <!--añade las secciones que necesites-->
-
     <!--HEADER-->
     <div class="container-fluid">
         <!--cambia el text-align para mover la imagen de perfil, el titulo y la descripcion del negocio, ya sea a la izquierda, al centro o a la derecha-->
@@ -216,7 +192,7 @@
             <br><br>
         </div>
     </div>
-    <!--seccion 1-->
+    <!--seccion 1: Nosotros-->
     <div class="container" id="seccion1">
         <div class="row">
             <div class="col-12" style="padding: 2rem">
@@ -229,7 +205,7 @@
             </div>
         </div>
     </div>
-    <!--seccion 2-->
+    <!--seccion 2: Nuestros Servicios-->
     <div class="container" id="seccion2">
         <div class="row">
             <div class="col-12" style="padding: 2rem">
@@ -240,7 +216,7 @@
             </div>
         </div>
     </div>
-    <!--seccion 3-->
+    <!--seccion 3: recuadro de Video-->
     <div class="container" id="seccion3">
         <div class="row">
             <div class="col-12" style="padding: 2rem">
@@ -253,11 +229,13 @@
     <!--footer-->
     <div class="footer container-fluid" id="contacto" style="text-align: center">
         <div class="row justify-content-center" style="margin: 0; padding: 2rem; text-align: center">
+        <!--Contenedor con el logo de la pagina. Solo se muestra en version Escritorio-->
             <div class="col-md-4 d-none d-sm-none d-md-block" style="padding: 2rem; text-align: center">
                 <br> <img src="<?php echo $footer ?>" class="img-fluid" style="max-width:220px; box-shadow: none;">
                 <br>
                 <br>
             </div>
+        <!--Contenedor con el nombre del sitio: Solo se muestra en Movil-->
             <div class="d-block d-sm-block d-md-none">
                 <h4 style="color: font-weight: 100"><?php echo $titulo ?></h4>
             </div>
@@ -266,17 +244,18 @@
                 <h3>
                     Contacto
                 </h3>
+                <!--Fila y columnas extras para mejorar la responsividad de la seccion de contactos-->
                 <div class="row ">
                     <div class="col-6 ">
                         <p class="" style="font-weight: 400">
-                            <!--borra los que no necesites-->
                             <a href="mailto:<?php echo $correo_contacto ?>"><?php echo $correo_contacto ?> </a> <br>
-                            <a href="<?php echo $link_contacto ?>"><?php echo $nombre_contacto ?> </a> <br>
+                            <p><?php echo $nombre_contacto ?> </p>
                             <a href="tel:<?php echo $telefono ?>"><?php echo $telefono ?> </a> <br>
                         <p><?php echo $ubicacion?></p>
                         </p>
                     </div>
                     <div class="col-6">
+                    <!--Iframe de google maps-->
                         <iframe
                             src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.4951327430613!2d-99.15355508598921!3d19.434207986883433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8d360ff2985%3A0x4c30977c75d6e40d!2sAv.%20Paseo%20de%20la%20Reforma%2026%2C%20Ju%C3%A1rez%2C%20Cuauht%C3%A9moc%2C%2006600%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses!2smx!4v1612828453276!5m2!1ses!2smx"
                             width="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
@@ -290,7 +269,6 @@
                     Redes Sociales
                 </h3>
                 <p>
-                    <!--iconos de fontawesome para redes sociales con sus links. Borra los que no uses-->
                     <a href="https://api.whatsapp.com/send?phone=<?php echo $telefono_wa?>&text=<?php echo $mensaje_default_WA?>"
                         target="_blank"><i class='fab fa-whatsapp' style='font-size:28px; padding: 1rem'></i></a>
                     <a href="<?php echo $instagram ?>" target="_blank"><i class="fab fa-instagram"
@@ -299,12 +277,14 @@
                             style='font-size:28px; padding: 1rem'></i></a>
                     <a href="<?php echo $facebook ?>" target="_blank"><i class='fab fa-facebook'
                             style='font-size:28px; padding: 1rem'></i></a>
+                    <!--Icono de LinkedIn añadido desde fontawsome-->
                     <a href="<?php echo $linkedin ?>" target="_blank"><i class="fab fa-linkedin"
                             style='font-size:28px; padding: 1rem'></i></a>
                 </p>
             </div>
         </div>
     </div>
+    <!--Elementos añadidos para el boton flotante de Whatsapp-->
     <div id="myDiv"></div>
 
     <script type="text/javascript">
