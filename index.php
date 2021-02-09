@@ -1,268 +1,320 @@
 <?php
     //modifica estos valores para personalizar la plantilla
     //Modificalos segun esté en el formulario o info que te proporcionen
-    $nombre_contacto = "nombre";
-    $telefono_contacto = "5500000000";
+    $nombre_contacto = "Cliente 1";
     $dominio = "yamblet.com";
-    $correo = "correo@ejemplo.com";
-    $titulo = "titulo";
-    $propuesta_valor_corta = "propuesta de valor corta";
+    $titulo = "Vanity Air";
+    $propuesta_valor_corta = "Empresarial";
 
     //puedes añadir los colores por nombre o por hexadecimal
     $tema_color_1 = "black";
     $tema_color_2 = "white";
-    $tema_color_3 = "#EAEFEF";
-    $tema_color_4 = "#111877"; //este color es el que aparecerá en la barra de navegacion de chrome para a movil
+    $tema_color_3 = "#F0FEFF";
+    $tema_color_4 = "#00BFD3"; //este color es el que aparecerá en la barra de navegacion de chrome para a movil
     //si necesitas mas colores añadelo aqui y hazle echo en el documento 
-    $descripcion_negocio = "descripcion negocio";
-    $decripcion_negocio_slogan = "descripcion con slogan (lo que aparezca en el formulario)";
+    $descripcion_negocio = "Academia de Danza Aérea";
+    $decripcion_negocio_slogan = "Nuestras clases de Danza Aérea combinan elementos como: telas, aro y  trapecio.
+    Vanity Air además de ser el espacio ideal para aprender, te da la oportunidad de vivir la experiencia de presentarte en un teatro. 
+    Somos un equipo de artistas, creativos y profesionales en educación y entretenimiento.
+    Trabajamos en armonía y constante comunicación para hacerte sentir como en casa. Contamos con especialistas y profesionales en Danza Aérea.
+    Cada uno ha participado en diferentes compañías artísticas en México y diferentes partes del Mundo.";
 
     //púedes añadir texto adicional con una variable o directamente al documento, como prefieras (siempre con buena ortografia, no como el desarrollador que hizo esta plantilla) 
-    $texto= "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices viverra lectus, vel volutpat velit sodales nec. Aenean lacinia nunc diam, vitae iaculis metus tincidunt ut. Integer efficitur dui et mauris tempus, a maximus enim suscipit. Pellentesque aliquet gravida justo, ut vestibulum magna molestie et. Nunc non auctor nulla. Vivamus pulvinar libero ut rhoncus molestie. Nam sed egestas arcu, eu condimentum diam. Maecenas tristique facilisis egestas. Aenean eget metus elit. Quisque aliquet, enim vel efficitur faucibus, justo mi rutrum nunc, eget pretium orci est in mauris. Donec a pulvinar tortor, ut sagittis nulla. Nam posuere varius arcu a aliquet. Nunc vitae velit urna. Aliquam molestie, metus non congue consectetur, tellus orci iaculis lacus, ut luctus mi ex eget nulla. Aenean sollicitudin ipsum quam, a cursus est pellentesque sit amet.";
-    $telefono = 5511223344; //telefono local
-    $telefono_wa = 5511223344; //numero que lanza el icono de whatsapp
-    $ubicacion = "direccion completa del contacto";
+    $texto= "Acrobacias, ritmo, elegancia, imaginación y condición física, son los elementos que forman parte de la danza aérea. ¿Te apuntas? Te ayudamos a adentrarte en el mundo de la danza aérea con técnicas corporales que te permitirán desarrollarte en las alturas empleando diversos elementos en diferentes aparatos como el aro o el trapecio.";
+    $telefono = 5519793131; //telefono local<---- no se proporciono
+    $telefono_wa = 5519793131; //numero que lanza el icono de whatsapp
+    $ubicacion = "Av. Paseo de la Reforma 26 Juárez, Cuauhtémoc, 06600 Ciudad de México, CDMX";
     $link_contacto = "google.com";//link a otra web si lo requiere
-    $correo_contacto = "correo@correocorporativo.com"; //como aparezca en el formulario, se creará despues de que se compre el dominio
-    $mensaje_default_WA="Hola"; //el mensaje con el que se va alanzar el boton de whatsapp
+    $correo_contacto = "prueba@vanityair.com"; //como aparezca en el formulario, se creará despues de que se compre el dominio
+    $mensaje_default_WA="Gracias por contactar a $titulo, ¿En qué puedo ayudarte?"; //el mensaje con el que se va alanzar el boton de whatsapp
 
     //si no tiene alguna de las redes borra el icono en la parte del footer que dice "redes sociales"
-    $instagram="instagram";
-    $facebook="facebook";
-    $twitter="twitter";
+    $instagram="https://www.instagram.com/yamblet_/";
+    $facebook="https://www.facebook.com/Yamblet";
+    $twitter="https://twitter.com/Yamblet";
+    $linkedin = "https://www.linkedin.com/company/yamblet";
     //en caso de faltar alguna (linkedin o youtube) añadela en el footer con su icono de font awesome correspondiente
     
     //remplaza las imagenes que necesites (o como se vea mejor)
-    $icono = "images/azul-rojo.png"; //imagen que aparece en la pestaña del navegador
-    $header = "images/header-03.jpg"; //imagen de fondo en la seccion header
-    $imagen_perfil = "images/azul-rojo.png"; //imagen central en la seccion header
-    $footer = "images/azul.png"; //imagen que aparece en el footer
-    $navbar = "images/azul.png"; //imagen que aparece en el brand del navbar
+    $icono = "images/Logoprueba_icono.png"; //imagen que aparece en la pestaña del navegador
+    $header = "images/Galería/prueba_img_danza_01.jpg"; //imagen de fondo en la seccion header
+    $imagen_perfil = "images/Logo/prueba_logo_completo.png"; //imagen central en la seccion header
+    $footer = "images/Logo/prueba_logo_azul.png"; //imagen que aparece en el footer
+    $navbar = "images/Logo/prueba_logo_blanco.png"; //imagen que aparece en el brand del navbar
 
     //cuando entregues, borra todos los comentarios de ayuda del documento :u
 ?>
-    <!DOCTYPE html>
-    <html lang="es">
+<!DOCTYPE html>
+<html lang="es">
 
-    <head>
-        <!-- Open Graph Meta Tags generated by MashShare 3.7.5 - https://mashshare.net -->
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="<?php echo $titulo ?>" />
-        <meta property="og:description" content="<?php echo $titulo.' | '.$propuesta_valor_corta?>" />
-        <meta property="og:image" content="<?php echo $icono ?>" />
-        <meta property="og:url" content="<?php echo $dominio ?>" />
-        <meta property="og:site_name" content="<?php echo $titulo ?>" />
-        <meta property="og:updated_time" content="2020-04-09T18:49:34-04:00" />
+<head>
+    <!-- Open Graph Meta Tags generated by MashShare 3.7.5 - https://mashshare.net -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<?php echo $titulo ?>" />
+    <meta property="og:description" content="<?php echo $titulo.' | '.$propuesta_valor_corta?>" />
+    <meta property="og:image" content="<?php echo $icono ?>" />
+    <meta property="og:url" content="<?php echo $dominio ?>" />
+    <meta property="og:site_name" content="<?php echo $titulo ?>" />
+    <meta property="og:updated_time" content="2020-04-09T18:49:34-04:00" />
 
-        <!-- This site is optimized with the Yoast SEO plugin v14.0.4 - https://yoast.com/wordpress/plugins/seo/ -->
-        <title><?php echo $titulo ?> | Sitio Oficial</title>
-        <meta name="description" content="<?php echo $descripcion_negocio ?>" />
-        <meta name="robots" content="index, follow" />
-        <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
-        <link rel="canonical" href="<?php echo $dominio ?>" />
-        <link rel="icon" type="image/x-icon" href="<?php echo $icono ?>">
-        <meta property="og:locale" content="es_ES" />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content="<?php echo $titulo ?>" />
-        <meta property="og:description" content="<?php echo $descripcion_negocio ?>" />
-        <meta property="og:url" content="<?php echo $dominio ?>" />
-        <meta property="og:site_name" content="<?php echo $titulo ?>" />
-        <meta property="article:publisher" content="<?php echo $dominio ?>" />
-        <meta property="article:author" content="<?php echo $nombre_contacto ?>" />
-        <meta property="og:image" content="<?php echo $icono ?>" />
-        <meta property="og:image:width" content="330" />
-        <meta property="og:image:height" content="330" />
-        
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="preconnect" href="https://fonts.gstatic.com">
-        <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
-        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
-        <link href="https://fonts.googleapis.com/css2?family=Sintony:wght@400;700&display=swap" rel="stylesheet">
-        <script src='https://kit.fontawesome.com/a076d05399.js'></script>
-        <meta name="msapplication-TileColor" content="<?php echo $tema_color_1 ?>">
-        <meta name="msapplication-TileImage" content="<?php echo $icono ?>">
-        <meta name="theme-color" content="<?php echo $tema_color_4?>">
-        
-        <!--si necesitas añadir mas estilo hazlo aquí-->
-        <!--elimina los estilos que no necesitas-->
-        <style>
-            body {
-                font-family: 'Raleway', sans-serif;
-                background-color: <?php echo $tema_color_2?>;
-            }
-            
-            .container-fluid {
-                padding: 0!important;
-            }
-            
-            .navbar {
-                padding: 1rem;
-                background-color: <?php echo $tema_color_4 ?>!important;
-            }
-            
-            h4 {
-                font-weight: 300;
-            }
-            
-            .jumbotron {
-                padding: 6rem 2rem;
-                border-radius: 0rem;
-            }
-            
-            img {
-                box-shadow: 1px 1px 10px 3px #00000042;
-            }
+    <!-- This site is optimized with the Yoast SEO plugin v14.0.4 - https://yoast.com/wordpress/plugins/seo/ -->
+    <title><?php echo $titulo ?> | Sitio Oficial</title>
+    <meta name="description" content="<?php echo $descripcion_negocio ?>" />
+    <meta name="robots" content="index, follow" />
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1" />
+    <link rel="canonical" href="<?php echo $dominio ?>" />
+    <link rel="icon" type="image/x-icon" href="<?php echo $icono ?>">
+    <meta property="og:locale" content="es_ES" />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="<?php echo $titulo ?>" />
+    <meta property="og:description" content="<?php echo $descripcion_negocio ?>" />
+    <meta property="og:url" content="<?php echo $dominio ?>" />
+    <meta property="og:site_name" content="<?php echo $titulo ?>" />
+    <meta property="article:publisher" content="<?php echo $dominio ?>" />
+    <meta property="article:author" content="<?php echo $nombre_contacto ?>" />
+    <meta property="og:image" content="<?php echo $icono ?>" />
+    <meta property="og:image:width" content="330" />
+    <meta property="og:image:height" content="330" />
 
-            h2, h3, h4,li {
-                color: <?php echo $tema_color_4 ?>;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 700;
-            }
-            h1 {
-                color: <?php echo $tema_color_4 ?>;
-                font-family: 'Raleway', sans-serif;
-                font-weight: 700;
-            }
-            label, p, a {
-                color: <?php echo $tema_color_1 ?>;
-                font-family: 'Raleway', sans-serif;
-            }
-            .btn {
-                background-color: <?php echo $tema_color_4 ?>;
-                color: <?php echo $tema_color_2 ?>;
-            }
-            .container-fluid {
-                color: <?php echo $tema_color_1 ?>;
-            }
-            footer{
-                color: <?php echo $tema_color_1?>;
-                background-color: <?php echo $tema_color_2?>;
-            }
-            .col{
-                text-align: justify;
-            }
-            i{
-                color: <?php echo $tema_color_4 ?>; 
-            }
-            .footer{
-                background-color:<?php echo $tema_color_3?>;
-            }
-        </style>
-    </head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@300;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Sintony:wght@400;700&display=swap" rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <meta name="msapplication-TileColor" content="<?php echo $tema_color_1 ?>">
+    <meta name="msapplication-TileImage" content="<?php echo $icono ?>">
+    <meta name="theme-color" content="<?php echo $tema_color_4?>">
+    <link rel="stylesheet" href="floating-wpp.min.css">
+    <script type="text/javascript" src="jquery-3.3.1.min.js"></script>
+    <script type="text/javascript" src="floating-wpp.min.js"></script>
+    <!--si necesitas añadir mas estilo hazlo aquí-->
+    <!--elimina los estilos que no necesitas-->
+    <style>
+    body {
+        font-family: 'Raleway', sans-serif;
+        background-color: <?php echo $tema_color_2?>;
+    }
 
-    <body id="page-top">
+    .container-fluid {
+        padding: 0 !important;
+    }
+
+    .navbar {
+        padding: 1rem;
+        background-color: <?php echo $tema_color_4 ?> !important;
+    }
+
+    h4 {
+        font-weight: 300;
+    }
+
+    .jumbotron {
+        padding: 6rem 2rem;
+        border-radius: 0rem;
+    }
+
+    img {
+        box-shadow: 1px 1px 10px 3px #00000042;
+    }
+
+    h2,
+    h3,
+    h4,
+    li {
+        color: <?php echo $tema_color_4 ?>;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+    }
+
+    h1 {
+        color: <?php echo $tema_color_4 ?>;
+        font-family: 'Raleway', sans-serif;
+        font-weight: 700;
+    }
+
+    label,
+    p,
+    a {
+        color: <?php echo $tema_color_1 ?>;
+        font-family: 'Raleway', sans-serif;
+    }
+
+    .btn {
+        background-color: <?php echo $tema_color_4 ?>;
+        color: <?php echo $tema_color_2 ?>;
+    }
+
+    .container-fluid {
+        color: <?php echo $tema_color_1 ?>;
+    }
+
+    footer {
+        color: <?php echo $tema_color_1?>;
+        background-color: <?php echo $tema_color_2?>;
+    }
+
+    .col {
+        text-align: justify;
+    }
+
+    i {
+        color: <?php echo $tema_color_4 ?>;
+    }
+
+    .footer {
+        background-color: <?php echo $tema_color_3?>;
+    }
+    </style>
+</head>
+
+<body id="page-top">
     <div id="fb-root"></div>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v9.0" nonce="FOEVmYye"></script>
-        <!--NAVBAR-->
-        <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark"><!--si el color de la navbar es claro, cambia a navbar-light-->
-            <a class="navbar-brand" href="#page-top"><img class="img-responsive" src="<?php echo $navbar?>" style="box-shadow:none; height: 2rem;"></a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarSupportedContent">
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/es_ES/sdk.js#xfbml=1&version=v9.0"
+        nonce="FOEVmYye"></script>
+    <!--NAVBAR-->
+    <nav class="navbar sticky-top navbar-expand-lg navbar-dark bg-dark">
+        <!--si el color de la navbar es claro, cambia a navbar-light-->
+        <a class="navbar-brand" href="#page-top"><img class="img-responsive" src="<?php echo $navbar?>"
+                style="box-shadow:none; height: 3rem;"></a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="navbar-collapse collapse w-100 order-3 dual-collapse2" id="navbarSupportedContent">
             <ul class="navbar-nav mr-auto">
                 <!--añade los items que necesites-->
-                
+
                 <li class="nav-item">
-                    <a class="nav-link " href="#seccion1">Primer sección</a>
+                    <a class="nav-link " href="#seccion1">Nosotros</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#seccion2">Segunda sección</a>
+                    <a class="nav-link " href="#seccion2">Nuestros servicios</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link " href="#seccion3">Tercera sección</a>
+                    <a class="nav-link " href="#contacto">contacto</a>
                 </li>
             </ul>
-            </div>
-        </nav>
-        <!--añade las secciones que necesites-->
+        </div>
+    </nav>
+    <!--añade las secciones que necesites-->
 
-        <!--HEADER-->
-        <div class="container-fluid" >
-            <!--cambia el text-align para mover la imagen de perfil, el titulo y la descripcion del negocio, ya sea a la izquierda, al centro o a la derecha-->
-            <div class="jumbotron" style="text-align: left; background-image: url(<?php echo $header ?>);background-repeat: no-repeat;background-attachment: scroll;background-position: center center;background-size: auto;">
-                <img src="<?php echo $imagen_perfil ?>" style="box-shadow: none;max-height:220px; border-radius: 50%;" class="img-fluid">
-                <h1><?php echo $titulo ?></h1>
-                <h4><?php echo $descripcion_negocio ?> </h4>
+    <!--HEADER-->
+    <div class="container-fluid">
+        <!--cambia el text-align para mover la imagen de perfil, el titulo y la descripcion del negocio, ya sea a la izquierda, al centro o a la derecha-->
+        <div class="jumbotron"
+            style="text-align: right; background-image: url(<?php echo $header ?>);background-repeat: no-repeat;background-attachment: scroll;background-position: center center;background-size: auto;">
+            <img src="<?php echo $imagen_perfil ?>" style="box-shadow: none;max-height:225px; border-radius: 50%;"
+                class="img-fluid">
+            <h1><?php echo $titulo ?></h1>
+            <h4><?php echo $descripcion_negocio ?> </h4>
             <br><br>
-            </div>
         </div>
-        <!--seccion 1-->
-        <div class="container" id="seccion1">
-            <div class="row">
-                <div class="col-12" style="padding: 2rem"  >
-                    <h1 style="text-align: center; padding: 2rem;">
-                        Nosotros
-                    </h1>
-                    <p class="p-4">
+    </div>
+    <!--seccion 1-->
+    <div class="container" id="seccion1">
+        <div class="row">
+            <div class="col-12" style="padding: 2rem">
+                <h1 style="text-align: center; padding: 2rem;">
+                    Nosotros
+                </h1>
+                <p class="p-4">
                     <?php echo $decripcion_negocio_slogan ?>
-                    </p>
-                </div>
+                </p>
             </div>
         </div>
-        <!--seccion 2-->
-        <div class="container" id="seccion2">
-            <div class="row">
-            <div class="col-12" style="padding: 2rem"  >
-                    <h1 style="text-align: center; padding: 2rem;">
-                        Servicios
-                    </h1>
-                    <p class="p-4"><?php echo $texto?></p>
-                </div>
+    </div>
+    <!--seccion 2-->
+    <div class="container" id="seccion2">
+        <div class="row">
+            <div class="col-12" style="padding: 2rem">
+                <h1 style="text-align: center; padding: 2rem;">
+                    Servicios
+                </h1>
+                <p class="p-4"><?php echo $texto?></p>
             </div>
         </div>
-        <!--seccion 3-->
-        <div class="container" id="seccion3">
-            <div class="row">
-                <div class="col-12" style="padding: 2rem"  >
-                    <h1 style="text-align: center; padding: 2rem;">
-                        Mercados
-                    </h1>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ultrices viverra lectus, vel volutpat velit sodales nec. Aenean lacinia nunc diam, vitae iaculis metus tincidunt ut. Integer efficitur dui et mauris tempus, a maximus enim suscipit. Pellentesque aliquet gravida justo, ut vestibulum magna molestie et. Nunc non auctor nulla. Vivamus pulvinar libero ut rhoncus molestie. Nam sed egestas arcu, eu condimentum diam. Maecenas tristique facilisis egestas. Aenean eget metus elit. Quisque aliquet, enim vel efficitur faucibus, justo mi rutrum nunc, eget pretium orci est in mauris. Donec a pulvinar tortor, ut sagittis nulla. Nam posuere varius arcu a aliquet. Nunc vitae velit urna. Aliquam molestie, metus non congue consectetur, tellus orci iaculis lacus, ut luctus mi ex eget nulla. Aenean sollicitudin ipsum quam, a cursus est pellentesque sit amet.</p>
-                </div>
+    </div>
+    <!--seccion 3-->
+    <div class="container" id="seccion3">
+        <div class="row">
+            <div class="col-12" style="padding: 2rem">
+                <video poster="images/Galería/prueba_img_danza_02.jpg" width="100%" controls>
+                    <source src="images/Galería/prueba_video_danza_01.mp4" type="video/mp4" />
+                </video>
             </div>
         </div>
-        <!--footer-->
-        <div class="footer container-fluid" id="contacto" style="text-align: center">
-            <div class="row justify-content-center" style="margin: 0; padding: 2rem; text-align: center">
-                <div class="col" style="padding: 2rem; text-align: center">
-                    <br> <img src="<?php echo $footer ?>" class="img-fluid" style="max-width:220px; box-shadow: none;">
-                    <br>
-                    <br>
-                    <!--h4 style="color: font-weight: 100"><?php echo $titulo ?></h4-->
-                </div>
-                <div class="" style="padding: 2rem; text-align: center">
-                    <br>
-                    <h3 >
-                        Contacto
-                    </h3>
-                    <p class=""  style="font-weight: 400">
-                        <!--borra los que no necesites-->
-                        <a href="mailto: <?php echo $correo ?>"><?php echo $correo ?></a> <br>
-                        <a href="mailto:<?php echo $correo_contacto ?>"><?php echo $correo_contacto ?> </a> <br>
-                        <a href="<?php echo $link_contacto ?>"><?php echo $nombre_contacto ?> </a> <br>
-                        <a href="tel:<?php echo $telefono ?>"><?php echo $telefono ?> </a> <br>
-                    </p>
-                </div>
-                <div class="col" style="padding: 2rem; text-align: center">
-                    <br>
-                    <h3>
-                        Redes Sociales
-                    </h3>
-                    <p>
-                        <!--iconos de fontawesome para redes sociales con sus links. Borra los que no uses-->
-                        <a href="https://api.whatsapp.com/send?phone=<?php echo $telefono_wa?>&text=<?php echo $mensaje_default_WA?>" target="_blank"><i class='fab fa-whatsapp' style='font-size:28px; padding: 1rem'></i></a>
-                        <a href="https://instagram.com/<?php echo $instagram ?>" target="_blank"><i class="fab fa-instagram" style="font-size:28px; padding: 1rem"></i></a>
-                        <a href="https://twitter.com/<?php echo $twitter ?>" target="_blank"><i class='fab fa-twitter' style='font-size:28px; padding: 1rem'></i></a>
-                        <a href="https://facebook.com/<?php echo $facebook ?>" target="_blank"><i class='fab fa-facebook' style='font-size:28px; padding: 1rem'></i></a>
-                    </p>
+    </div>
+    <!--footer-->
+    <div class="footer container-fluid" id="contacto" style="text-align: center">
+        <div class="row justify-content-center" style="margin: 0; padding: 2rem; text-align: center">
+            <div class="col-md-4 d-none d-sm-none d-md-block" style="padding: 2rem; text-align: center">
+                <br> <img src="<?php echo $footer ?>" class="img-fluid" style="max-width:220px; box-shadow: none;">
+                <br>
+                <br>
+            </div>
+            <div class="d-block d-sm-block d-md-none">
+                <h4 style="color: font-weight: 100"><?php echo $titulo ?></h4>
+            </div>
+            <div class="col-md-4" style="padding: 2rem; text-align: center">
+                <br>
+                <h3>
+                    Contacto
+                </h3>
+                <div class="row ">
+                    <div class="col-6 ">
+                        <p class="" style="font-weight: 400">
+                            <!--borra los que no necesites-->
+                            <a href="mailto:<?php echo $correo_contacto ?>"><?php echo $correo_contacto ?> </a> <br>
+                            <a href="<?php echo $link_contacto ?>"><?php echo $nombre_contacto ?> </a> <br>
+                            <a href="tel:<?php echo $telefono ?>"><?php echo $telefono ?> </a> <br>
+                        <p><?php echo $ubicacion?></p>
+                        </p>
+                    </div>
+                    <div class="col-6">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3762.4951327430613!2d-99.15355508598921!3d19.434207986883433!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x85d1f8d360ff2985%3A0x4c30977c75d6e40d!2sAv.%20Paseo%20de%20la%20Reforma%2026%2C%20Ju%C3%A1rez%2C%20Cuauht%C3%A9moc%2C%2006600%20Ciudad%20de%20M%C3%A9xico%2C%20CDMX!5e0!3m2!1ses!2smx!4v1612828453276!5m2!1ses!2smx"
+                            width="100%" frameborder="0" style="border:0;" allowfullscreen="" aria-hidden="false"
+                            tabindex="0"></iframe>
+                    </div>
                 </div>
             </div>
+            <div class="col-md-4" style="padding: 2rem; text-align: center">
+                <br>
+                <h3>
+                    Redes Sociales
+                </h3>
+                <p>
+                    <!--iconos de fontawesome para redes sociales con sus links. Borra los que no uses-->
+                    <a href="https://api.whatsapp.com/send?phone=<?php echo $telefono_wa?>&text=<?php echo $mensaje_default_WA?>"
+                        target="_blank"><i class='fab fa-whatsapp' style='font-size:28px; padding: 1rem'></i></a>
+                    <a href="<?php echo $instagram ?>" target="_blank"><i class="fab fa-instagram"
+                            style="font-size:28px; padding: 1rem"></i></a>
+                    <a href="<?php echo $twitter ?>" target="_blank"><i class='fab fa-twitter'
+                            style='font-size:28px; padding: 1rem'></i></a>
+                    <a href="<?php echo $facebook ?>" target="_blank"><i class='fab fa-facebook'
+                            style='font-size:28px; padding: 1rem'></i></a>
+                    <a href="<?php echo $linkedin ?>" target="_blank"><i class="fab fa-linkedin"
+                            style='font-size:28px; padding: 1rem'></i></a>
+                </p>
+            </div>
         </div>
-    </body>
-    </html>
+    </div>
+    <div id="myDiv"></div>
+
+    <script type="text/javascript">
+        $('#myDiv').floatingWhatsApp({
+            phone: '<?php echo $telefono_wa?>',
+            popupMessage: '<?PHP echo $mensaje_default_WA?>',
+            showPopup: true
+        });
+    </script>
+
+</body>
+
+</html>
